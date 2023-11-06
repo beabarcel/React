@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "./style.css";
 
 const dados = {
-  login: "joaofelipe",
-  senha: "senha@123",
+  login: "user",
+  senha: "0000",
 };
 
 export default function Login() {
@@ -31,7 +32,7 @@ export default function Login() {
       setLogin("");
       setSenha("");
 
-      navigate("/home/" + login);
+      navigate("/animais");
       // navigate(`/${login}`);
     } else {
       console.log("Login ou Senha Inválidos!");
@@ -40,7 +41,7 @@ export default function Login() {
 
   return (
     <>
-      <h1>Página de Login</h1>
+      <h1 className="login">Login</h1>
 
       <form>
         <input
@@ -48,6 +49,7 @@ export default function Login() {
           placeholder="Digite Seu login"
           value={login}
           onChange={(e) => setLogin(e.target.value)}
+          style={{ marginBottom: "10px" }}
         />
         <br />
         <input
@@ -55,6 +57,7 @@ export default function Login() {
           placeholder="Digite Sua Senha"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
+          style={{ marginBottom: "35px" }}
         />
         <br />
         <button type="button" onClick={entrar}>

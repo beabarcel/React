@@ -5,6 +5,7 @@ import Contato from "./pages/Contato";
 import Animais from "./pages/Animais";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,12 +14,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home/:user" element={<Home />} />
-        <Route path="/login/:parametro" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/home" element={<Home />} />
         <Route path="/animais" element={<Animais />} />
         <Route path="*" element={<h1>Página Não Encontrada</h1>} />
       </Routes>
+      <Footer></Footer>
     </>
   );
 }

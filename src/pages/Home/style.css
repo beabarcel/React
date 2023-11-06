@@ -3,4 +3,9 @@
 .pixel-pet {
   text-align: center;
   font-family: "Public Pixel", sans-serif;
+  color: palegreen;
+}
+
+h2 {
+  color: palevioletred;
 }
